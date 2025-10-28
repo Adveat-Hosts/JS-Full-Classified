@@ -49,3 +49,44 @@ let case_num_new_3 = case_num.splice(1,3)
 // this will store the index from 1 to 3 and the og array will have remaining elements
 console.log(case_num)
 console.log(case_num_new_3)
+
+// -------------------------------Array 2nd Lecture---------------------------------------
+
+const blake_asso_1 = ["Thomas", "Bertram","Reede"]
+const blake_asso_2 = ["Timothy","Oscar","Lorelei"]
+
+// push function
+blake_asso_1.push(blake_asso_2) // added the entire array as one element
+console.log(blake_asso_1)
+console.log(blake_asso_1[3][2]) // tedious was of representation
+
+// concat function (Returns an array)
+
+const blake_asso_1_1 = ["Thomas", "Bertram","Reede"]
+const blake_asso_2_2 = ["Timothy","Oscar","Lorelei"]
+const blake_asso_3_3 = blake_asso_1_1.concat(blake_asso_2_2)
+console.log(blake_asso_3_3) // all elements come one by one
+
+// ...method (Spread Operator)
+const blake_asso_3_3_3 = [...blake_asso_1_1,...blake_asso_2_2]
+console.log(blake_asso_3_3_3)
+
+// flat method 
+const case_num_4 = [1,2,[3,4,[45,6,7],[56,7]],67,8]
+case_num_4_new = case_num_4.flat(Infinity) //means it will spread out the array till infinite depth
+console.log(case_num_4_new)
+
+//some boolean methods
+console.log(Array.isArray("Red John"))
+console.log(Array.isArray(case_num_4))
+console.log(Array.from("Red John"))
+console.log(Array.from({name : "Red John"})) // interesting case when object is passed
+// returns empty array as we don't know whether on keys or values
+
+// Array.of method
+
+const kill_day_1 = 17
+const kill_day_2 = 12
+const kill_day_3 = 11
+
+console.log(Array.of(kill_day_1,kill_day_2,kill_day_3))
